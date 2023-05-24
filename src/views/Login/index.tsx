@@ -11,9 +11,9 @@ import {
 import styles from './styles';
 
 //Navigation
-import { Props } from '../../configs/navigation.config';
+import { StackProps } from '../../configs/navigation.config';
 
-const Login: React.FC<Props<'Login'>> = ({ navigation }) => {
+const Login: React.FC<StackProps<'Login'>> = ({ navigation }) => {
   return(
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
@@ -21,10 +21,14 @@ const Login: React.FC<Props<'Login'>> = ({ navigation }) => {
         <Text style={styles.subtitle}>Faça login para continuar</Text>
       </View>
       <View style={styles.form}>
-        <View style={styles.label}></View>
-        <View style={styles.label}></View>
+        <View style={styles.label}>
+          <TextInput/>
+        </View>
+        <View style={styles.label}>
+          <TextInput/>
+        </View>
         <TouchableHighlight style={styles.button}>
-          <Text style={styles.buttonText}>Logi</Text>
+          <Text style={styles.buttonText}>Login</Text>
         </TouchableHighlight>
       </View>
       <TouchableHighlight onPress={() => { navigation.navigate('Register'); }}>

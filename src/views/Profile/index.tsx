@@ -9,16 +9,16 @@ import {
 import styles from './styles';
 
 //Navigation
-import { StackProps } from '../../configs/navigation.config';
+import { TabProps } from '../../configs/navigation.config';
 
-const Register: React.FC<StackProps<'Register'>> = ({ navigation }) => {
+const Profile: React.FC<TabProps<'Profile'>> = () => {
   return(
     <SafeAreaView>
       <View>
-        <Text>Tela de cadastro =)</Text>
+        <Text>Profile</Text>
       </View>
     </SafeAreaView>
   )
 }
 
-export default Register;
+export default Profile;

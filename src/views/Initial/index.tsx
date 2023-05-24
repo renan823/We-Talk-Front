@@ -10,19 +10,19 @@ import {
 import styles from './styles';
 
 //Navigation
-import { Props } from '../../configs/navigation.config';
+import { StackProps } from '../../configs/navigation.config';
 
 //use it after animation
 //navigation.navigate('Login');
 
 //colocar uma animação no 'title'
 
-const Initial: React.FC<Props<'Initial'>> = ({ navigation }) => {
+const Initial: React.FC<StackProps<'Initial'>> = ({ navigation }) => {
   (setInterval(() => {
     navigation.navigate('Login');
   }, 2500))
 
-  return(
+  return (
     <SafeAreaView style={styles.container}>
       <View>
         <Text style={styles.title}>We Talk</Text>
