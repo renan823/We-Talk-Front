@@ -20,19 +20,21 @@ const Login: React.FC<StackProps<'Login'>> = ({ navigation }) => {
         <Text style={styles.title}>We Talk</Text>
         <Text style={styles.subtitle}>Faça login para continuar</Text>
       </View>
-      <View style={styles.form}>
+      <View>
         <View style={styles.label}>
-          <TextInput/>
+          <Text style={styles.labelText}>Nome</Text>
+          <TextInput style={styles.input}/>
         </View>
         <View style={styles.label}>
-          <TextInput/>
+          <Text style={styles.labelText}>Senha</Text>
+          <TextInput style={styles.input}/>
+          <TouchableHighlight style={styles.button}>
+            <Text style={styles.buttonText}>Login</Text>
+          </TouchableHighlight>
         </View>
-        <TouchableHighlight style={styles.button}>
-          <Text style={styles.buttonText}>Login</Text>
-        </TouchableHighlight>
       </View>
-      <TouchableHighlight onPress={() => { navigation.navigate('Register'); }}>
-        <Text style={styles.link}>Não tem uma conta? Cadastre-se!</Text>
+      <TouchableHighlight style={styles.link} onPress={() => { navigation.navigate('Register'); }}>
+        <Text style={styles.linkText}>Não tem uma conta? Cadastre-se!</Text>
       </TouchableHighlight>
     </SafeAreaView>
   )

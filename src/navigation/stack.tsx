@@ -17,10 +17,10 @@ const Stacks: React.FC<RootStackParamList> = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator screenOptions={{ headerShown: false }}>
-                <Stack.Screen name='Tabs' component={Tabs} />
-                <Stack.Screen name='Login' component={Screens.login} />
                 <Stack.Screen name='Initial' component={Screens.initial} />
+                <Stack.Screen name='Login' component={Screens.login} />
                 <Stack.Screen name='Register' component={Screens.register} />
+                <Stack.Screen name='Tabs' component={Tabs} />
             </Stack.Navigator>
         </NavigationContainer>
     );
